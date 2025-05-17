@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction Form</title>
+  <link rel="stylesheet" href="../css/transaction.css"/>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Yeni İşlem Ekle</h2>
+    <form id="transactionForm">
+      <div class="form-group">
+        <label for="amount">Tutar (₺)</label>
+        <input type="number" id="amount" name="amount" step="0.01" required />
+      </div>
+
+      <div class="form-group">
+        <label for="type">İşlem Türü</label>
+        <select id="type" name="type" required>
+          <option value="">Seçiniz</option>
+          <option value="INCOME">Gelir</option>
+          <option value="EXPENSE">Gider</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Tarih</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Açıklama</label>
+        <textarea id="description" name="description" placeholder="Opsiyonel"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="userId">Kullanıcı ID</label>
+        <input type="number" id="userId" name="userId" required />
+      </div>
+
+      <div class="form-group">
+        <label for="currency">Para Birimi</label>
+        <select id="currency" name="currency" required>
+          <option value="">Seçiniz</option>
+          <option value="TRY">TRY</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+
+      <button type="submit">Kaydet</button>
+    </form>
+  </div>
+
+  <script src="../js/transaction.js"></script>
+</body>
+</html>
